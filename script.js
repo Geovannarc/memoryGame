@@ -2,51 +2,51 @@ document.addEventListener('DOMContentLoaded', () => {
     const cardArr = [
         {
             name: 'card1',
-            img: 'file:///C:/Users/geovanna.freitas/Desktop/memoryGame/imgs/card1.png'
+            img: '/imgs/card1.png'
         },
         {
             name: 'card1',
-            img: 'file:///C:/Users/geovanna.freitas/Desktop/memoryGame/imgs/card1.png'
+            img: '/imgs/card1.png'
         },
         {
             name: 'card2',
-            img: 'file:///C:/Users/geovanna.freitas/Desktop/memoryGame/imgs/card2.png'
+            img: '/imgs/card2.png'
         },
         {
             name: 'card2',
-            img: 'file:///C:/Users/geovanna.freitas/Desktop/memoryGame/imgs/card2.png'
+            img: '/imgs/card2.png'
         },
         {
             name: 'card3',
-            img: 'file:///C:/Users/geovanna.freitas/Desktop/memoryGame/imgs/card3.jpg'
+            img: '/imgs/card3.jpg'
         },
         {
             name: 'card3',
-            img: 'file:///C:/Users/geovanna.freitas/Desktop/memoryGame/imgs/card3.jpg'
+            img: '/imgs/card3.jpg'
         },
         {
             name: 'card4',
-            img: 'file:///C:/Users/geovanna.freitas/Desktop/memoryGame/imgs/card4.jpg'
+            img: '/imgs/card4.jpg'
         },
         {
             name: 'card4',
-            img: 'file:///C:/Users/geovanna.freitas/Desktop/memoryGame/imgs/card4.jpg'
+            img: '/imgs/card4.jpg'
         },
         {
             name: 'card5',
-            img: 'file:///C:/Users/geovanna.freitas/Desktop/memoryGame/imgs/card5.jpg'
+            img: '/imgs/card5.jpg'
         },
         {
             name: 'card5',
-            img: 'file:///C:/Users/geovanna.freitas/Desktop/memoryGame/imgs/card5.jpg'
+            img: '/imgs/card5.jpg'
         },
         {
             name: 'card6',
-            img: 'file:///C:/Users/geovanna.freitas/Desktop/memoryGame/imgs/card6.jpg'
+            img: '/imgs/card6.jpg'
         },
         {
             name: 'card6',
-            img: 'file:///C:/Users/geovanna.freitas/Desktop/memoryGame/imgs/card6.jpg'
+            img: '/imgs/card6.jpg'
         }
     ]
         
@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
         for(let i=0; i< cardArr.length; i++){
             let card = document.createElement('img');
             card.className = 'card'; //important if there's going to be any other images that are not cards --> don't use 'card' w/ bootstrap --> bugou tudo
-            card.setAttribute('src', 'file:///C:/Users/geovanna.freitas/Desktop/memoryGame/imgs/verso.png');
+            card.setAttribute('src', '/imgs/verso.png');
             card.setAttribute('data-id', i);
             grid.appendChild(card);
             card.addEventListener('click', flipCard);
@@ -97,13 +97,13 @@ document.addEventListener('DOMContentLoaded', () => {
         let optionOneId = cardsChosenId[0];
         let optionTwoId = cardsChosenId[1];
             if(cardsChosen[0] === cardsChosen[1]){
-                cards[optionOneId].setAttribute('src', 'file:///C:/Users/geovanna.freitas/Desktop/memoryGame/imgs/white.png');
-                cards[optionTwoId].setAttribute('src', 'file:///C:/Users/geovanna.freitas/Desktop/memoryGame/imgs/white.png');
+                cards[optionOneId].setAttribute('src', '/imgs/white.png');
+                cards[optionTwoId].setAttribute('src', '/imgs/white.png');
                 cardsWon.push(cardsChosen[0]);
                 cardsWon.push(cardsChosen[1]);
             }else{
-                cards[optionOneId].setAttribute('src', 'file:///C:/Users/geovanna.freitas/Desktop/memoryGame/imgs/verso.png');
-                cards[optionTwoId].setAttribute('src', 'file:///C:/Users/geovanna.freitas/Desktop/memoryGame/imgs/verso.png');
+                cards[optionOneId].setAttribute('src', '/imgs/verso.png');
+                cards[optionTwoId].setAttribute('src', '/imgs/verso.png');
             }
             cardsChosen = [];
             cardsChosenId = [];
