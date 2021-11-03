@@ -2,51 +2,51 @@ document.addEventListener('DOMContentLoaded', () => {
     const cardArr = [
         {
             name: 'card1',
-            img: '/imgs/card1.png'
+            img: 'https://i.ibb.co/rdLCS80/card1.png'
         },
         {
             name: 'card1',
-            img: '/imgs/card1.png'
+            img: 'https://i.ibb.co/rdLCS80/card1.png'
         },
         {
             name: 'card2',
-            img: '/imgs/card2.png'
+            img: 'https://i.ibb.co/VMfcGt4/card2.png'
         },
         {
             name: 'card2',
-            img: '/imgs/card2.png'
+            img: 'https://i.ibb.co/VMfcGt4/card2.png'
         },
         {
             name: 'card3',
-            img: '/imgs/card3.jpg'
+            img: 'https://i.ibb.co/nmv2wCm/card3.jpg'
         },
         {
             name: 'card3',
-            img: '/imgs/card3.jpg'
+            img: 'https://i.ibb.co/nmv2wCm/card3.jpg'
         },
         {
             name: 'card4',
-            img: '/imgs/card4.jpg'
+            img: 'https://i.ibb.co/YfvQNDL/card4.jpg'
         },
         {
             name: 'card4',
-            img: '/imgs/card4.jpg'
+            img: 'https://i.ibb.co/YfvQNDL/card4.jpg'
         },
         {
             name: 'card5',
-            img: '/imgs/card5.jpg'
+            img: 'https://i.ibb.co/bsmLcy9/card5.jpg'
         },
         {
             name: 'card5',
-            img: '/imgs/card5.jpg'
+            img: 'https://i.ibb.co/bsmLcy9/card5.jpg'
         },
         {
             name: 'card6',
-            img: '/imgs/card6.jpg'
+            img: 'https://i.ibb.co/mvTg9rJ/card6.jpg'
         },
         {
             name: 'card6',
-            img: '/imgs/card6.jpg'
+            img: 'https://i.ibb.co/mvTg9rJ/card6.jpg'
         }
     ]
         
@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
         for(let i=0; i< cardArr.length; i++){
             let card = document.createElement('img');
             card.className = 'card'; //important if there's going to be any other images that are not cards --> don't use 'card' w/ bootstrap --> bugou tudo
-            card.setAttribute('src', '/imgs/verso.png');
+            card.setAttribute('src', 'https://i.ibb.co/Lkmvb0H/verso.png');
             card.setAttribute('data-id', i);
             grid.appendChild(card);
             card.addEventListener('click', flipCard);
@@ -97,13 +97,13 @@ document.addEventListener('DOMContentLoaded', () => {
         let optionOneId = cardsChosenId[0];
         let optionTwoId = cardsChosenId[1];
             if(cardsChosen[0] === cardsChosen[1]){
-                cards[optionOneId].setAttribute('src', '/imgs/white.png');
-                cards[optionTwoId].setAttribute('src', '/imgs/white.png');
+                cards[optionOneId].setAttribute('src', 'https://i.ibb.co/ng2XmqJ/white.png');
+                cards[optionTwoId].setAttribute('src', 'https://i.ibb.co/ng2XmqJ/white.png');
                 cardsWon.push(cardsChosen[0]);
                 cardsWon.push(cardsChosen[1]);
             }else{
-                cards[optionOneId].setAttribute('src', '/imgs/verso.png');
-                cards[optionTwoId].setAttribute('src', '/imgs/verso.png');
+                cards[optionOneId].setAttribute('src', 'https://i.ibb.co/Lkmvb0H/verso.png');
+                cards[optionTwoId].setAttribute('src', 'https://i.ibb.co/Lkmvb0H/verso.png');
             }
             cardsChosen = [];
             cardsChosenId = [];
@@ -144,7 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
             this.setAttribute('src', cardArr[cardId].img);
                 if(cardsChosen.length === 2){
                     timeoutRunning = true;
-                    setTimeout(checkForMatch, 350)
+                    setTimeout(checkForMatch, 450)
                 }
         }
 })
