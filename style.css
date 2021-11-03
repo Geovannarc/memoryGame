@@ -1,0 +1,58 @@
+.grid {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        width: 1200px;
+        max-width: 100%;
+}
+
+
+body{
+    background-image: url('imgs/fundo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+}
+
+.score{
+    background-color: rgb(240, 240, 240, 0.3);
+    text-align: center;
+    font-size: 1.6rem;
+    margin-top: 0;
+    padding: 10px;
+    margin-bottom: 10px;
+    max-width: 100%;
+}
+
+.display{
+    display: inline;
+}
+
+@media only screen and (max-width: 1199px) {
+    .grid {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;
+        width: 800px;
+    }
+  }
+
+  @media only screen and (max-width: 799px) {
+    .grid {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;
+        width: 400px;
+    }
+  }
