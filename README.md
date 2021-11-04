@@ -12,7 +12,7 @@ Jogo da memória do Rick and Morthy, desenvolvido com Vanilla JavaScript
 
 Functionalities I've learned:
 
-    set timeoutRunning = false; true when setTimeOut function is happening. Only flip cards when it's false --> important because users can click on another card while setTimeOut is running;
+    set timeoutRunning = false; true when setTimeOut function is happening. Only flip cards when it's false --> important because users can't click on another card while setTimeOut is running;
 
     to start a new game you need to set everything to it's initial state, including the grid -> innerHTML to ""; 
 
