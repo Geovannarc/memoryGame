@@ -1,5 +1,5 @@
 # memoryGame
- Rick and Morthy's themed memory game, developed with vanilla javascript.
+ Rick and Morthy's themed memory game, developed using vanilla javascript.
 
 It's a pretty simple game, where you've got to choose 2 cards at a time, and find all the pairs as quick as you can. 
 
