@@ -61,6 +61,11 @@ document.addEventListener('DOMContentLoaded', () => {
     let timer = document.querySelector('#timer');
 
     function startGame(){
+        let cards = document.querySelectorAll('img.card');
+        for(let i = 0; i<cards.length;i++){
+            cards[i].style.visibility = "visible";
+        }
+        
         grid.innerHTML = "";
         resultDisplay.textContent =" "+ 0;
         cardsWon = [];
@@ -90,15 +95,15 @@ document.addEventListener('DOMContentLoaded', () => {
             card.addEventListener('click', flipCard);
         }
     }
-
+    
     function checkForMatch(){
         timeoutRunning = false;
         let cards = document.querySelectorAll('img.card');
         let optionOneId = cardsChosenId[0];
         let optionTwoId = cardsChosenId[1];
             if(cardsChosen[0] === cardsChosen[1]){
-                cards[optionOneId].setAttribute('src', 'https://i.ibb.co/ng2XmqJ/white.png');
-                cards[optionTwoId].setAttribute('src', 'https://i.ibb.co/ng2XmqJ/white.png');
+                cards[optionOneId].style.visibility = "hidden"; 
+                cards[optionTwoId].style.visibility = "hidden"; 
                 cardsWon.push(cardsChosen[0]);
                 cardsWon.push(cardsChosen[1]);
             }else{
