@@ -114,28 +114,31 @@ document.addEventListener('DOMContentLoaded', () => {
             cardsChosenId = [];
             resultDisplay.textContent = " " +Math.floor(cardsWon.length * 1000 * 1/parseInt(timer.textContent));
             if(cardsWon.length === cardArr.length){
-
-                Swal.fire({
-                    width: 1000,
-                    title: 'PARABÉNS',
-                    html: `Você fez ${resultDisplay.textContent} pontos!`,
-                    padding: '1em',
-                    background: 'whitesmoke',
-                    showCloseButton: true,
-                    confirmButtonText: 'JOGAR DE NOVO',
-                    confirmButtonColor: 'purple',
-                    showCancelButton: false,
-                    backdrop: `
-                        rgba(0,0,123,0.1)
-                    `
-                }).then((result) => {
-                        if(result.isConfirmed){
-                            startGame();
-                        }
-                    })
+                youWon();
             }
     }
 
+    function youWon(){
+        Swal.fire({
+            width: 1000,
+            title: 'PARABÉNS',
+            html: `Você fez ${resultDisplay.textContent} pontos!`,
+            padding: '1em',
+            background: 'whitesmoke',
+            showCloseButton: true,
+            confirmButtonText: 'JOGAR DE NOVO',
+            confirmButtonColor: 'purple',
+            showCancelButton: false,
+            backdrop: `
+                rgba(0,0,123,0.1)
+            `
+        }).then((result) => {
+                if(result.isConfirmed){
+                    startGame();
+                }
+            })
+    }
+    
     function flipCard(){
             if(timeoutRunning){
                 return;
